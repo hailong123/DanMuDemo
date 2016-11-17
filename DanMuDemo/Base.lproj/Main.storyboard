@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img" translatesAutoresizingMaskIntoConstraints="NO" id="U8o-wv-ub7"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvK-IL-VZh" customClass="HLDanMuManagerView">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCc-c9-0eR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="h2c-rc-1J8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                                <state key="normal" backgroundImage="button">
+                                    <color key="titleColor" red="1" green="0.1134833839" blue="0.02953954717" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendDanMu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnx-9O-ixg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dvK-IL-VZh" firstAttribute="trailing" secondItem="U8o-wv-ub7" secondAttribute="trailing" id="9e4-5f-Rdo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kCc-c9-0eR" secondAttribute="bottom" constant="20" id="Agu-zR-bdX"/>
+                            <constraint firstItem="dvK-IL-VZh" firstAttribute="top" secondItem="U8o-wv-ub7" secondAttribute="top" id="DL0-JG-KmK"/>
+                            <constraint firstAttribute="trailing" secondItem="dvK-IL-VZh" secondAttribute="trailing" id="FAB-Dc-IPJ"/>
+                            <constraint firstItem="dvK-IL-VZh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YLf-Zf-ZIF"/>
+                            <constraint firstItem="dvK-IL-VZh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bZh-YE-xLX"/>
+                            <constraint firstItem="kCc-c9-0eR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSW-lt-48o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dvK-IL-VZh" secondAttribute="bottom" constant="100" id="gqS-ad-4R1"/>
+                            <constraint firstItem="dvK-IL-VZh" firstAttribute="bottom" secondItem="U8o-wv-ub7" secondAttribute="bottom" id="jmu-8q-ueK"/>
+                            <constraint firstItem="dvK-IL-VZh" firstAttribute="leading" secondItem="U8o-wv-ub7" secondAttribute="leading" id="yqE-3p-Ffg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="danmuView" destination="dvK-IL-VZh" id="UiW-ok-VJn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="110.19490254872565"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button" width="138" height="32"/>
+        <image name="img" width="400" height="250"/>
+    </resources>
+</document>
